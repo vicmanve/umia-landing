@@ -1,24 +1,10 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { Mic, FileText, ShieldCheck, Sparkles, Stethoscope, Menu, X } from "lucide-react";
-import { BlurFade } from "@/components/ui/blur-fade";
-import { WordRotate } from "@/components/ui/word-rotate";
-import { ShimmerButton } from "@/components/ui/shimmer-button";
-import { AnimatedBeam } from "@/components/ui/animated-beam";
-import { Spotlight } from "@/components/ui/spotlight";
-import { BackgroundBeams } from "@/components/ui/background-beams";
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import { Menu, X } from "lucide-react";
 import { assetPath, cn } from "@/lib/utils";
 
-const pill =
-  "inline-flex items-center gap-2 rounded-full border border-primary-teal/20 bg-mint px-4 py-1.5 text-xs font-medium tracking-widest text-primary-teal uppercase";
-
 /* ---------- 0. Navbar ---------- */
-export function TopBar() {
-  return null;
-}
-
 export function Navbar() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [isVisible, setIsVisible] = useState(true);
@@ -292,119 +278,5 @@ export function Navbar() {
   );
 }
 
-/* ---------- 1. Hero (Isometric 3D) ---------- */
+/* ---------- 1. Hero ---------- */
 export { HeroIsometric as Hero } from "@/components/hero-isometric";
-
-/* ---------- 3. EFECTO WOW · UMI ---------- */
-export function UmiSection() {
-  const container = useRef<HTMLDivElement>(null);
-  const center = useRef<HTMLDivElement>(null);
-  const n1 = useRef<HTMLDivElement>(null);
-  const n2 = useRef<HTMLDivElement>(null);
-  const n3 = useRef<HTMLDivElement>(null);
-  const n4 = useRef<HTMLDivElement>(null);
-
-  const nodes = [
-    { ref: n1, icon: FileText, label: "Nota SOAP", pos: "top-0 left-0" },
-    { ref: n2, icon: Stethoscope, label: "Récipe digital", pos: "top-0 right-0" },
-    { ref: n3, icon: ShieldCheck, label: "Alerta fármacos", pos: "bottom-0 left-0" },
-    { ref: n4, icon: Mic, label: "Informe WhatsApp", pos: "bottom-0 right-0" },
-  ];
-
-  const acciones = [
-    ["Escucha ambiental pasiva", "Conversa natural con tu paciente. UMI extrae síntomas, antecedentes y exploración sin que toques el teclado."],
-    ["Alertas farmacológicas", "Cruza alergias y medicación actual y te avisa del riesgo de interacción antes de prescribir."],
-    ["Récipes en segundos", "Detecta el plan discutido y deja el récipe listo con posología, MPPS y QR para WhatsApp."],
-    ["Tú tienes la última palabra", "UMI nunca decide por ti: te entrega un borrador perfecto y apruebas con 1 clic."],
-  ];
-
-  return (
-    <section id="umi" data-nav-theme="dark" className="relative overflow-hidden bg-deep-teal py-24 text-canvas">
-      <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="#b7d8d9" />
-      <BackgroundBeams />
-      <div className="relative z-10 mx-auto max-w-6xl px-6">
-        <BlurFade inView>
-          <span className="inline-flex rounded-full border border-mint-strong/30 px-4 py-1.5 text-xs tracking-widest text-mint-strong uppercase">
-            <Sparkles className="mr-2 size-4" /> La evolución de la IA en salud
-          </span>
-          <h2 className="font-display mt-6 max-w-3xl text-4xl leading-tight sm:text-5xl">
-            Te presentamos a <span className="em-serif text-mint-strong">UMI</span>: La primera IA
-            agéntica para medicina en Latam
-          </h2>
-          <p className="mt-5 max-w-2xl text-lg text-mint/80">
-            Otras herramientas te piden dictar o corregir textos genéricos.{" "}
-            <strong className="text-canvas">UMI actúa:</strong> escucha tu consulta y orquesta
-            expediente, récipes y alertas mientras tú miras al paciente a los ojos.
-          </p>
-        </BlurFade>
-
-        <div className="mt-14 grid items-center gap-12 lg:grid-cols-2">
-          <CardContainer containerClassName="py-0" className="w-full">
-            <CardBody className="h-auto w-full">
-              <CardItem translateZ={40} className="w-full">
-                <div
-                  ref={container}
-                  className="relative mx-auto h-[380px] w-full max-w-md rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur"
-                >
-                  <div
-                    ref={center}
-                    className="absolute top-1/2 left-1/2 z-10 size-32 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full border-4 border-mint bg-mint shadow-[0_0_70px_#b7d8d9]"
-                  >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={assetPath("/umi/umi-mascota.png")}
-                      alt="UMI, la IA agéntica de UMIA"
-                      className="size-full scale-125 object-cover"
-                    />
-                  </div>
-                  {nodes.map(({ ref, icon: Icon, label, pos }) => (
-                    <div key={label} className={cn("absolute m-4 flex flex-col items-center gap-1", pos)}>
-                      <div ref={ref} className="flex size-14 items-center justify-center rounded-2xl border border-white/15 bg-primary-teal">
-                        <Icon className="size-6 text-mint" />
-                      </div>
-                      <span className="text-xs text-mint/80">{label}</span>
-                    </div>
-                  ))}
-                  {nodes.map(({ ref, label }, i) => (
-                    <AnimatedBeam
-                      key={label}
-                      containerRef={container}
-                      fromRef={center}
-                      toRef={ref}
-                      delay={i * 0.4}
-                      gradientStartColor="#b7d8d9"
-                      gradientStopColor="#194849"
-                    />
-                  ))}
-                </div>
-              </CardItem>
-            </CardBody>
-          </CardContainer>
-
-          <ul className="space-y-4">
-            {acciones.map(([t, d], i) => (
-              <BlurFade key={t} inView delay={0.1 * i}>
-                <li className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                  <h3 className="font-medium text-canvas">{t}</h3>
-                  <p className="mt-1 text-sm text-mint/75">{d}</p>
-                </li>
-              </BlurFade>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function RotatingPain() {
-  return (
-    <section data-nav-theme="light" className="bg-canvas py-6 text-center text-ink-2">
-      <span>Atiende sin</span>{" "}
-      <WordRotate
-        className="inline font-display text-xl text-deep-teal italic"
-        words={["carpetas físicas", "tu WhatsApp personal", "noches de papeleo", "plantillas de Word"]}
-      />
-    </section>
-  );
-}

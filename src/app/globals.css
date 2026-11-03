@@ -46,26 +46,8 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
-  --animate-marquee: marquee var(--duration) infinite linear;
-  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
   --animate-shimmer-slide: shimmer-slide var(--speed) ease-in-out infinite alternate;
   --animate-spin-around: spin-around calc(var(--speed) * 2) infinite linear;
-  @keyframes marquee {
-  from {
-    transform: translateX(0);
-    }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-    }
-  }
-  @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
-    }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
-    }
-  }
   @keyframes shimmer-slide {
   to {
     transform: translate(calc(100cqw - 100%), 0);
@@ -189,56 +171,6 @@
   @keyframes spotlight-fade {
     0% { opacity: 0; }
     100% { opacity: 1; }
-  }
-  @keyframes float-y {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-  --animate-float-y: float-y 6s ease-in-out infinite;
-
-  @keyframes float-iso-1 {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-12px); }
-  }
-  @keyframes float-iso-2 {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-16px); }
-  }
-  @keyframes float-iso-3 {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-9px); }
-  }
-  @keyframes float-iso-4 {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-14px); }
-  }
-  @keyframes stream-pulse {
-    0% {
-      stroke-dashoffset: 140;
-      opacity: 0;
-    }
-    15% {
-      opacity: 1;
-    }
-    85% {
-      opacity: 1;
-    }
-    100% {
-      stroke-dashoffset: 0;
-      opacity: 0;
-    }
-  }
-  @keyframes line-glow {
-    0%, 100% { opacity: 0.28; }
-    50% { opacity: 0.55; }
-  }
-  @keyframes flow-dash {
-    from {
-      stroke-dashoffset: 60;
-    }
-    to {
-      stroke-dashoffset: 0;
-    }
   }
 }
 
