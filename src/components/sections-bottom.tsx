@@ -12,7 +12,6 @@ import {
 } from "lucide-react";
 import { useReducedMotion } from "motion/react";
 import { BlurFade } from "@/components/ui/blur-fade";
-import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { assetPath, cn } from "@/lib/utils";
 
 const h2 =
@@ -400,7 +399,7 @@ export function Pricing() {
 
               <button
                 type="button"
-                className="mt-5 sm:mt-6 w-full rounded-full border border-primary-teal/35 bg-surface py-3 text-sm font-semibold text-deep-teal transition-[background-color,border-color,transform] duration-150 ease-out hover:border-primary-teal hover:bg-mint/50 motion-safe:enabled:active:scale-[0.96]"
+                className="mt-5 sm:mt-6 w-full rounded-full border border-primary-teal/35 bg-surface py-3 text-sm font-semibold text-deep-teal transition-colors duration-150 ease-out hover:border-primary-teal hover:bg-mint/50"
               >
                 Crear cuenta gratis
               </button>
@@ -464,7 +463,7 @@ export function Pricing() {
 
               <button
                 type="button"
-                className="mt-5 sm:mt-6 w-full rounded-full bg-[#FFFFFF] py-3 text-sm font-bold text-deep-teal shadow-[0_10px_24px_rgba(0,0,0,0.22)] transition-[background-color,transform,box-shadow] duration-150 ease-out hover:bg-[#FFFFFF]/90 hover:scale-[1.02] motion-safe:enabled:active:scale-[0.96]"
+                className="mt-5 sm:mt-6 w-full rounded-full bg-[#FFFFFF] py-3 text-sm font-bold text-deep-teal transition-colors duration-150 ease-out hover:bg-[#FFFFFF]/90"
               >
                 Comenzar prueba de 14 días
               </button>
@@ -515,7 +514,7 @@ export function Pricing() {
 
               <a
                 href="#api"
-                className="mt-5 sm:mt-6 block w-full rounded-full bg-deep-teal py-3 text-center text-sm font-semibold text-white transition-[background-color,transform] duration-150 ease-out hover:bg-primary-teal hover:scale-[1.02] motion-safe:active:scale-[0.96]"
+                className="mt-5 sm:mt-6 block w-full rounded-full bg-deep-teal py-3 text-center text-sm font-semibold text-white transition-colors duration-150 ease-out hover:bg-primary-teal"
               >
                 Contactar equipo B2B
               </a>
@@ -583,8 +582,9 @@ export function Faq() {
 
   return (
     <section
+      id="faq"
       data-nav-theme="light"
-      className="relative pt-6 pb-16 sm:pt-12 sm:pb-28 lg:pb-32"
+      className="relative pt-6 pb-16 sm:pt-12 sm:pb-28 lg:pb-32 scroll-mt-20"
       style={{
         background:
           "linear-gradient(180deg, #F5F4F0 0%, #F5F4F0 59%, #D6E7E4 90%, #CAE2DF 100%)",
@@ -708,13 +708,12 @@ export function FinalCta() {
         </p>
 
         <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-4">
-          <ShimmerButton
-            background="#FFFFFF"
-            shimmerColor="#194849"
-            className="h-12 w-full max-w-xs sm:w-auto px-6 sm:px-8 text-sm sm:text-base font-bold text-deep-teal shadow-xl hover:scale-[1.03]"
+          <a
+            href="#precios"
+            className="inline-flex h-12 w-full max-w-xs sm:w-auto items-center justify-center rounded-full bg-[#FFFFFF] px-6 sm:px-8 text-sm sm:text-base font-bold text-deep-teal transition-colors duration-150 ease-out hover:bg-[#FFFFFF]/90"
           >
             Crear cuenta y probar gratis
-          </ShimmerButton>
+          </a>
         </div>
 
         <p className="mt-5 text-xs leading-relaxed text-mint/60">
@@ -735,44 +734,129 @@ export function Footer() {
       className="border-t border-white/10 bg-[#051c1d] px-5 pt-12 pb-24 text-sm text-mint/70 sm:px-6 sm:py-14"
     >
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-4 md:gap-10">
+        {/* Columna 1: Logotipo UMIA y misión de marca */}
         <div className="col-span-2 md:col-span-1">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={assetPath("/umia-logo-white.svg")} alt="UMIA" className="h-6 w-auto" />
-          <p className="mt-3 max-w-xs text-xs leading-relaxed text-mint/60">
+          <img src={assetPath("/umia-logo-white.svg")} alt="UMIA" className="h-7 w-auto" />
+          <p className="mt-4 max-w-xs text-xs leading-relaxed text-mint/60">
             Uniendo Medicina, Inteligencia y Atención. La plataforma clínica agéntica líder en Latinoamérica.
           </p>
         </div>
+
+        {/* Columna 2: Información Legal */}
         <div>
-          <p className="mb-3 font-bold text-canvas uppercase text-xs tracking-wider">Ecosistema</p>
+          <p className="mb-3 font-bold text-canvas uppercase text-xs tracking-wider">
+            Información Legal
+          </p>
           <ul className="space-y-2 text-xs">
-            <li><a href="#ecosistema" className="transition-colors duration-150 hover:text-canvas">Historia Clínica HCE</a></li>
-            <li><a href="#umi" className="transition-colors duration-150 hover:text-canvas">UMI (IA Agéntica)</a></li>
-            <li><a href="#ecosistema" className="transition-colors duration-150 hover:text-canvas">Récipes con QR</a></li>
-            <li><a href="#ecosistema" className="transition-colors duration-150 hover:text-canvas">Visor DICOM</a></li>
+            <li>
+              <a
+                href="#terminos"
+                className="transition-colors duration-150 hover:text-canvas"
+              >
+                Términos y condiciones
+              </a>
+            </li>
           </ul>
         </div>
+
+        {/* Columna 3: Privacidad y Seguridad */}
         <div>
-          <p className="mb-3 font-bold text-canvas uppercase text-xs tracking-wider">Cumplimiento</p>
+          <p className="mb-3 font-bold text-canvas uppercase text-xs tracking-wider">
+            Privacidad y Seguridad
+          </p>
           <ul className="space-y-2 text-xs">
-            <li><a href="#seguridad" className="transition-colors duration-150 hover:text-canvas">Estándar HIPAA</a></li>
-            <li><a href="#seguridad" className="transition-colors duration-150 hover:text-canvas">Protocolos HL7 &amp; FHIR</a></li>
-            <li><a href="#seguridad" className="transition-colors duration-150 hover:text-canvas">Codificación CIE-10/11</a></li>
-            <li><a href="#seguridad" className="transition-colors duration-150 hover:text-canvas">Arquitectura SOC 2</a></li>
+            <li>
+              <a
+                href="#privacidad"
+                className="transition-colors duration-150 hover:text-canvas"
+              >
+                Política de privacidad
+              </a>
+            </li>
           </ul>
         </div>
+
+        {/* Columna 4: FAQ – Preguntas frecuentes */}
         <div className="col-span-2 sm:col-span-1">
-          <p className="mb-3 font-bold text-canvas uppercase text-xs tracking-wider">Contacto &amp; API</p>
+          <p className="mb-3 font-bold text-canvas uppercase text-xs tracking-wider">
+            FAQ – Preguntas frecuentes
+          </p>
           <ul className="space-y-2 text-xs">
-            <li><a href="#api" className="transition-colors duration-150 hover:text-canvas">Documentación REST API</a></li>
-            <li><a href="#precios" className="transition-colors duration-150 hover:text-canvas">Soporte médico 24/7</a></li>
-            <li><a href="#api" className="transition-colors duration-150 hover:text-canvas">Demo para instituciones</a></li>
-            <li><a href="#precios" className="transition-colors duration-150 hover:text-canvas">Planes y precios</a></li>
+            <li>
+              <a
+                href="#faq"
+                className="transition-colors duration-150 hover:text-canvas font-medium text-mint"
+              >
+                Preguntas frecuentes
+              </a>
+            </li>
           </ul>
         </div>
       </div>
-      <div className="mx-auto mt-10 sm:mt-12 max-w-6xl border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between text-center sm:text-left text-xs text-mint/50">
-        <p>© 2026 UMIA Salud Inc. Todos los derechos reservados.</p>
-        <p className="mt-2 sm:mt-0">Diseñado con los más altos estándares de privacidad clínica.</p>
+
+      {/* Barra inferior: RIF y contacto a la izquierda, Redes sociales a la derecha */}
+      <div className="mx-auto mt-10 sm:mt-12 max-w-6xl border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-xs text-mint/70">
+        <div className="space-y-1">
+          <p className="font-semibold text-mint/95 tracking-wide">
+            RIF J502621539 UNIDAD DE MEDICINA INTERNA AMBULATORIA (UMIA), C.A.
+          </p>
+          <p className="text-mint/70">
+            Teléfono de contacto:{" "}
+            <a
+              href="tel:+584221282391"
+              className="font-medium text-canvas hover:text-mint transition-colors duration-150 underline-offset-2 hover:underline"
+            >
+              +58 (422)128-2391
+            </a>
+          </p>
+        </div>
+
+        {/* Redes Sociales: LinkedIn, Instagram, X */}
+        <div className="flex items-center gap-3">
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn de UMIA"
+            className="flex size-9 items-center justify-center rounded-lg border border-white/10 bg-[#0d3436] text-canvas shadow-2xs transition-[background-color,border-color,transform] duration-150 hover:border-mint/40 hover:bg-[#13494c] hover:text-mint motion-safe:active:scale-95"
+          >
+            <span className="font-bold text-sm tracking-tight">in</span>
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram de UMIA"
+            className="flex size-9 items-center justify-center rounded-lg border border-white/10 bg-[#0d3436] text-canvas shadow-2xs transition-[background-color,border-color,transform] duration-150 hover:border-mint/40 hover:bg-[#13494c] hover:text-mint motion-safe:active:scale-95"
+          >
+            <svg
+              className="size-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+          <a
+            href="https://x.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X (Twitter) de UMIA"
+            className="flex size-9 items-center justify-center rounded-lg border border-white/10 bg-[#0d3436] text-canvas shadow-2xs transition-[background-color,border-color,transform] duration-150 hover:border-mint/40 hover:bg-[#13494c] hover:text-mint motion-safe:active:scale-95"
+          >
+            <svg className="size-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+        </div>
       </div>
     </footer>
   );

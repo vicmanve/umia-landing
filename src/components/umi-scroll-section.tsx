@@ -12,7 +12,6 @@ import {
   Mic,
   UserPlus,
   Sparkles,
-  Play,
   Check,
   QrCode,
   AlertTriangle,
@@ -22,7 +21,6 @@ import {
 } from "lucide-react";
 import { Spotlight } from "@/components/ui/spotlight";
 import { BackgroundBeams } from "@/components/ui/background-beams";
-import { ClinicalVideoModal } from "@/components/clinical-video-modal";
 import { assetPath, cn } from "@/lib/utils";
 
 type ScenarioId = "soap" | "recipe" | "paciente" | "resumen";
@@ -681,7 +679,6 @@ function UmiLoopIllustration({
 export function UmiScrollSection() {
   const runwayRef = useRef<HTMLDivElement>(null);
   const prefersReducedMotion = Boolean(useReducedMotion());
-  const [demoOpen, setDemoOpen] = useState(false);
   const [activeScenarioId, setActiveScenarioId] = useState<ScenarioId>("soap");
 
   const activeScenario =
@@ -862,30 +859,25 @@ export function UmiScrollSection() {
             />
           </div>
 
-          {/* Botón discreto para ver el video real completo */}
-          <div className="mt-6 flex justify-center">
-            <button
-              type="button"
-              onClick={() => setDemoOpen(true)}
-              className="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/[0.05] py-2 pl-4 pr-2.5 text-xs font-semibold text-canvas transition-[background-color,border-color,transform] duration-150 ease-out hover:border-white/40 hover:bg-white/[0.1] motion-safe:enabled:active:scale-[0.96]"
-            >
-              <span>Ver presentación en video</span>
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#FFFFFF] text-deep-teal">
-                <Play className="size-2.5 translate-x-[0.5px] fill-current" />
-              </span>
-            </button>
+          {/* Video demostración de UMI con Hispana Seguros con buen espaciado */}
+          <div className="mt-8 sm:mt-12 w-full">
+            <div className="overflow-hidden rounded-[24px] sm:rounded-[32px] border border-white/15 bg-[#0e3637]/75 p-2 sm:p-3 shadow-2xl backdrop-blur-md">
+              <div className="relative aspect-video w-full overflow-hidden rounded-[18px] sm:rounded-[22px] bg-[#051c1d]">
+                <video
+                  src={assetPath("/videos/umia-hispana-seguros-16x9.mp4")}
+                  controls
+                  playsInline
+                  autoPlay={!prefersReducedMotion}
+                  muted
+                  loop
+                  preload="metadata"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>
-
-      <ClinicalVideoModal
-        open={demoOpen}
-        onClose={() => setDemoOpen(false)}
-        videoSrc={assetPath("/umi/presentacion-umi.mp4")}
-        posterSrc={assetPath("/umi/umi-poster.jpg")}
-        title="Conoce a UMI: IA Agéntica para Medicina"
-        subtitle="Desde la anamnesis hasta el informe y récipe con QR sin despegar la mirada de tu paciente."
-      />
     </section>
   );
 }

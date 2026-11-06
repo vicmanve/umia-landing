@@ -148,23 +148,16 @@ export function HeroIsometric() {
             estándar internacional en segundos.
           </p>
 
-          {/* Fila de acciones proporcionada en móvil (full-width simétrico) y en línea en sm+ */}
-          <div className="mt-7 flex w-full flex-col items-stretch gap-3 sm:mt-9 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+          {/* Acción principal del Hero */}
+          <div className="mt-7 flex w-full sm:mt-9 sm:w-auto">
             <a
               href="#precios"
-              className="group inline-flex h-12 sm:h-13 w-full sm:w-auto items-center justify-between sm:justify-start gap-3 rounded-full bg-[#FFFFFF] py-1.5 pl-11 pr-1.5 sm:pl-6 sm:pr-2 text-sm font-semibold text-deep-teal shadow-[0_12px_28px_rgba(0,0,0,0.26)] transition-[background-color,box-shadow,transform] duration-150 ease-out hover:bg-[#FFFFFF]/95 hover:-translate-y-0.5 motion-safe:active:scale-[0.96]"
+              className="inline-flex h-12 sm:h-13 w-full sm:w-auto items-center justify-between sm:justify-start gap-3 rounded-full bg-[#FFFFFF] py-1.5 pl-11 pr-1.5 sm:pl-6 sm:pr-2 text-sm font-semibold text-deep-teal transition-colors duration-150 ease-out hover:bg-[#FFFFFF]/90"
             >
               <span className="flex-1 text-center sm:flex-none">Crear cuenta gratis</span>
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-deep-teal text-canvas transition-transform duration-150 ease-out group-hover:translate-x-0.5">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-deep-teal text-canvas">
                 <ArrowRight className="size-4" strokeWidth={2.25} absoluteStrokeWidth />
               </span>
-            </a>
-
-            <a
-              href="#precios"
-              className="inline-flex h-12 sm:h-13 w-full sm:w-auto items-center justify-center rounded-full border border-white/35 bg-deep-teal/45 px-7 text-sm font-medium text-canvas backdrop-blur-md transition-[background-color,border-color,transform] duration-150 ease-out hover:border-white/65 hover:bg-deep-teal/65 hover:-translate-y-0.5 motion-safe:active:scale-[0.96]"
-            >
-              Ver planes
             </a>
           </div>
         </div>

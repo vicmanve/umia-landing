@@ -170,10 +170,10 @@ export function Navbar() {
             href="#precios"
             onClick={() => setMobileMenuOpen(false)}
             className={cn(
-              "inline-flex h-9 sm:h-10 lg:h-11 items-center justify-center rounded-full px-3.5 sm:px-5 lg:px-6 text-xs sm:text-sm font-semibold whitespace-nowrap transition-[background-color,color,box-shadow,transform] duration-150 ease-out hover:scale-[1.02] motion-safe:active:scale-[0.96]",
+              "inline-flex h-9 sm:h-10 lg:h-11 items-center justify-center rounded-full px-3.5 sm:px-5 lg:px-6 text-xs sm:text-sm font-semibold whitespace-nowrap transition-colors duration-150 ease-out",
               isDark
-                ? "bg-[#FFFFFF] text-deep-teal hover:bg-[#FFFFFF]/90 shadow-[0_4px_16px_rgba(0,0,0,0.18)]"
-                : "bg-deep-teal text-white hover:bg-primary-teal shadow-[0_4px_16px_rgba(12,55,56,0.16)]"
+                ? "bg-[#FFFFFF] text-deep-teal hover:bg-[#FFFFFF]/90"
+                : "bg-deep-teal text-white hover:bg-primary-teal"
             )}
           >
             Crear cuenta

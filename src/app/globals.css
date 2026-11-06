@@ -190,9 +190,37 @@ button, a[href] { -webkit-tap-highlight-color: transparent; }
 .font-display { font-family: var(--font-newsreader), Georgia, serif; letter-spacing: -0.02em; }
 .em-serif { font-style: italic; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
 
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes float-mid {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes float-fast {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+.animate-float-mid {
+  animation: float-mid 4.8s ease-in-out infinite;
+}
+.animate-float-fast {
+  animation: float-fast 5.2s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-spotlight {
     animation: spotlight-fade 0.3s ease-out both !important;
     transform: translate(-50%, -40%) scale(1);
+  }
+  .animate-float-slow,
+  .animate-float-mid,
+  .animate-float-fast {
+    animation: none !important;
   }
 }

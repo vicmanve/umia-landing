@@ -2,6 +2,7 @@ import { Navbar, Hero } from "@/components/sections-top";
 import { FeaturesHce } from "@/components/features-hce";
 import { UmiScrollSection } from "@/components/umi-scroll-section";
 import { StandardsSection } from "@/components/standards-section";
+import { B2bSection } from "@/components/b2b-section";
 import {
   Testimonials,
   Pricing,
@@ -29,16 +30,19 @@ export default function Home() {
       {/* 4. Estándares médicos y normativos de seguridad (HIPAA, HL7 FHIR, CIE-10/11, DICOM) */}
       <StandardsSection />
 
-      {/* 5. Testimonios médicos reales (UI/UX mejorada) */}
+      {/* 5. Integración B2B y API para desarrolladores e instituciones */}
+      <B2bSection />
+
+      {/* 6. Testimonios médicos reales (UI/UX mejorada) */}
       <Testimonials />
 
-      {/* 6. Planes y Precios transparentes (UI/UX mejorada con switcher anual) */}
+      {/* 7. Planes y Precios transparentes (UI/UX mejorada con switcher anual) */}
       <Pricing />
 
-      {/* 7. Preguntas frecuentes (Acordeón interactivo mejorado) */}
+      {/* 8. Preguntas frecuentes (Acordeón interactivo mejorado) */}
       <Faq />
 
-      {/* 8. Llamado a la acción final y pie de página */}
+      {/* 9. Llamado a la acción final y pie de página */}
       <FinalCta />
       <Footer />
 
