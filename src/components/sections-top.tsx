@@ -69,6 +69,7 @@ export function Navbar() {
     ["Funciones", "#ecosistema"],
     ["UMI", "#umi"],
     ["Seguridad", "#seguridad"],
+    ["B2B", "#b2b"],
     ["Planes", "#precios"],
   ];
 
