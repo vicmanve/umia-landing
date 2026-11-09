@@ -15,7 +15,7 @@ import { WhatsAppSupport } from "@/components/whatsapp-support";
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-clip bg-[#F5F4F0] text-ink antialiased">
-      {/* Navegación flotante */}
+      {/* Navegación flotante*/}
       <Navbar />
 
       {/* 1. Hero Section con ilustración y copies actualizados */}
