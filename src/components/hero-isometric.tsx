@@ -137,15 +137,14 @@ export function HeroIsometric() {
         <div className="flex max-w-xl lg:max-w-[630px] flex-col items-start text-left text-canvas">
           {/* Titular principal */}
           <h1 className="font-display text-[2.15rem] leading-[1.08] text-balance text-canvas sm:text-6xl sm:leading-[1.06] lg:text-[66px]">
-            Tecnología enfocada{" "}
+            Uniendo Medicina,{" "}
             <br className="hidden sm:inline" />
-            en la <span className="em-serif text-[#BBF7D0]">salud</span> de tus pacientes.
+            <span className="em-serif text-[#BBF7D0]">Inteligencia</span> y Atención.
           </h1>
 
           {/* Subtítulo descriptivo */}
           <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-mint/90 sm:mt-5 sm:text-lg">
-            Transcribe consultas en tiempo real, redacta notas SOAP y emite récipes con
-            estándar internacional en segundos.
+            Somos la plataforma clínica con IA agéntica que transcribe tus consultas, genera notas SOAP con CIE-10, visualiza estudios médicos y emite récipes al instante.
           </p>
 
           {/* Acción principal del Hero */}
@@ -154,7 +153,7 @@ export function HeroIsometric() {
               href="#precios"
               className="inline-flex h-12 sm:h-13 w-full sm:w-auto items-center justify-between sm:justify-start gap-3 rounded-full bg-[#FFFFFF] py-1.5 pl-11 pr-1.5 sm:pl-6 sm:pr-2 text-sm font-semibold text-deep-teal transition-colors duration-150 ease-out hover:bg-[#FFFFFF]/90"
             >
-              <span className="flex-1 text-center sm:flex-none">Crear cuenta gratis</span>
+              <span className="flex-1 text-center sm:flex-none">Crear cuenta</span>
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-deep-teal text-canvas">
                 <ArrowRight className="size-4" strokeWidth={2.25} absoluteStrokeWidth />
               </span>

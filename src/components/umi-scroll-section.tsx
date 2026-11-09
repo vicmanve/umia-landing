@@ -797,6 +797,9 @@ export function UmiScrollSection() {
           <p className="mt-2 max-w-lg text-sm sm:text-base text-mint/80">
             La primera IA agéntica para medicina en Latinoamérica.
           </p>
+          <p className="mt-1.5 max-w-md text-xs sm:text-sm text-mint/65">
+            Escucha la consulta y estructura la nota clínica con CIE-10 al instante.
+          </p>
         </motion.div>
 
         {/* 4. DEMOSTRACIÓN ANIMADA EN BUCLE POR CADA SECCIÓN DE UMI */}

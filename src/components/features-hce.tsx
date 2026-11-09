@@ -42,7 +42,7 @@ const featuresList: FeatureItem[] = [
     tabLabel: "Documentos",
     title: "Documentos listos en un clic",
     description:
-      "Recetas, informes, solicitudes de exámenes y demás documentos médicos, disponibles al instante para compartir por WhatsApp o descargar en PDF.",
+      "Récipes, informes, solicitudes de exámenes y demás documentos médicos, disponibles al instante para compartir por WhatsApp o descargar en PDF.",
     image:
       "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1000&auto=format&fit=crop&q=85",
     imageAlt: "Especialistas preparando récipes e informes médicos digitales",

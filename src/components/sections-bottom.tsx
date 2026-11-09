@@ -297,31 +297,28 @@ export function Pricing() {
   const [annual, setAnnual] = useState(true);
 
   const freeFeatures = [
-    "Hasta 30 pacientes activos",
-    "Historia clínica digital básica",
-    "5 horas de transcripción IA con UMI / mes",
-    "Notas SOAP estructuradas en PDF",
-    "Soporte por correo electrónico",
+    "10 GB de almacenamiento",
+    "50h de IA",
+    "Acceso básico",
+    "1 usuario",
+    "Soporte de la comunidad",
   ];
 
   const proFeatures = [
-    "Pacientes y expedientes ilimitados",
-    "Transcripción y Scribe IA ilimitado con UMI",
-    "Notas SOAP automáticas con códigos CIE-10/11",
-    "Récipes y recetas con firma digital y QR",
-    "Visor DICOM en la nube integrado",
-    "Agenda multiconsultorio y acceso secretaria",
-    "Soporte prioritario 24/7 por WhatsApp",
+    "10 GB de almacenamiento",
+    "50h de IA al mes",
+    "Acceso total a la plataforma",
+    "Plantillas con IA · DICOM · PDF",
+    "Compartir por correo",
+    "Soporte prioritario 24/7",
   ];
 
   const clinicFeatures = [
-    "Todo lo de Pro para equipos de salud",
-    "Multi-sucursal y roles asistenciales RBAC",
-    "Acceso a API REST B2B + Webhooks clínicos",
-    "Integración directa con sistemas HIS y ERP",
-    "Acuerdo de Privacidad BAA HIPAA dedicado",
-    "Onboarding y capacitación institucional",
-    "Gerente de cuenta técnico exclusivo",
+    "Almacenamiento ilimitado",
+    "API REST + Webhooks",
+    "SSO + SLA empresarial",
+    "Onboarding dedicado",
+    "Cumplimiento personalizado",
   ];
 
   return (
@@ -374,43 +371,32 @@ export function Pricing() {
         <div className="mt-10 sm:mt-14 grid items-stretch gap-5 sm:gap-6 lg:grid-cols-3 lg:gap-7">
           {/* Plan Starter / Free */}
           <div className="flex flex-col rounded-[28px] sm:rounded-[32px] border border-black/[0.06] bg-[#EAE9E3]/75 p-2 sm:p-2.5 transition-[box-shadow,border-color] duration-200 ease-out hover:border-primary-teal/25 hover:shadow-[0_18px_40px_rgba(12,55,56,0.07)]">
-            {/* Cápsula superior blanca (concéntrico: 28-8=20px en móvil, 32-10=22px en sm+) */}
+            {/* Cápsula superior blanca */}
             <div className="rounded-[20px] sm:rounded-[22px] border border-white bg-[#FFFFFF] p-5 sm:p-6 shadow-[0_2px_10px_rgba(12,55,56,0.04)]">
               <div className="flex items-center justify-between gap-2">
-                <span className="rounded-full bg-canvas px-3 py-1 text-[11px] font-bold tracking-wider uppercase text-ink-2">
-                  Inicial
+                <span className="text-xs font-semibold text-ink-2">
+                  Free
                 </span>
-                <span className="text-xs font-medium text-ink-2/70">1 consultorio</span>
               </div>
 
-              <h3 className="font-display mt-4 text-2xl text-deep-teal sm:text-[28px]">
-                Prueba Gratis
+              <h3 className="font-display mt-4 text-3xl font-bold text-deep-teal sm:text-4xl">
+                Gratis
               </h3>
               <p className="mt-1 text-xs text-ink-2">
-                Ideal para explorar el flujo clínico digital en tu consulta.
+                Para conocer la plataforma.
               </p>
-
-              <div className="mt-5 sm:mt-6 flex items-baseline gap-1.5 tabular-nums">
-                <span className="font-display text-4xl font-semibold text-deep-teal sm:text-5xl">
-                  $0
-                </span>
-                <span className="text-xs font-medium text-ink-2">/ siempre gratis</span>
-              </div>
 
               <button
                 type="button"
-                className="mt-5 sm:mt-6 w-full rounded-full border border-primary-teal/35 bg-surface py-3 text-sm font-semibold text-deep-teal transition-colors duration-150 ease-out hover:border-primary-teal hover:bg-mint/50"
+                className="mt-6 w-full rounded-full bg-deep-teal py-3 text-sm font-semibold text-white transition-colors duration-150 ease-out hover:bg-primary-teal"
               >
-                Crear cuenta gratis
+                Crear cuenta
               </button>
             </div>
 
             {/* Lista estructurada inferior */}
             <div className="flex flex-1 flex-col px-4 pt-5 pb-4 sm:px-5 sm:pt-6 sm:pb-5">
-              <p className="text-[11px] font-bold tracking-[0.14em] uppercase text-ink-2/65">
-                Qué incluye
-              </p>
-              <ul className="mt-3.5 sm:mt-4 space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-deep-teal/90">
+              <ul className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-deep-teal/90">
                 {freeFeatures.map((feat) => (
                   <li key={feat} className="flex items-start gap-2.5">
                     <span className="mt-0.5 flex h-4.5 w-4.5 shrink-0 items-center justify-center rounded-full bg-mint text-primary-teal">
@@ -423,7 +409,7 @@ export function Pricing() {
             </div>
           </div>
 
-          {/* Plan Pro (Destacado en verde UMIA + Cápsula interior luminosa + CTA #FFFFFF) */}
+          {/* Plan Pro (Destacado en verde UMIA) */}
           <div className="relative flex flex-col overflow-hidden rounded-[28px] sm:rounded-[32px] bg-deep-teal p-2 sm:p-2.5 text-canvas shadow-[0_28px_64px_rgba(12,55,56,0.24)] ring-1 ring-white/10 lg:-translate-y-3">
             {/* Destello de color en la esquina superior izquierda con #BBF7D0 */}
             <div
@@ -436,45 +422,49 @@ export function Pricing() {
               }}
             />
 
-            {/* Cápsula superior en gradiente esmeralda (concéntrico: 20px móvil / 22px sm+) */}
+            {/* Badge superior Más elegido */}
+            <div className="flex justify-center -mt-1 mb-2">
+              <span className="rounded-full bg-[#FFFFFF] px-3.5 py-1 text-[11px] font-bold tracking-wider text-deep-teal shadow-xs">
+                Más elegido
+              </span>
+            </div>
+
+            {/* Cápsula superior en gradiente esmeralda */}
             <div className="relative z-10 rounded-[20px] sm:rounded-[22px] border border-[#BBF7D0]/30 bg-gradient-to-br from-[#1b5051] via-[#144041] to-[#0f3334] p-5 sm:p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]">
               <div className="flex items-center justify-between gap-2">
-                <span className="rounded-full bg-[#BBF7D0] px-3 py-1 text-[11px] font-bold tracking-wider uppercase text-deep-teal">
-                  Más elegido
+                <span className="text-xs font-semibold text-mint/90">
+                  Pro
                 </span>
-                <span className="text-xs font-medium text-mint/85">Especialistas</span>
               </div>
 
-              <h3 className="font-display mt-4 text-2xl text-white sm:text-[28px]">
-                Médico Pro
-              </h3>
-              <p className="mt-1 text-xs text-mint/80">
-                Potencia ilimitada con UMI para tu práctica médica diaria.
-              </p>
-
-              <div className="mt-5 sm:mt-6 flex items-baseline gap-2 tabular-nums">
+              <div className="mt-3 flex items-baseline gap-1.5 tabular-nums">
                 <span className="font-display text-4xl font-semibold text-white sm:text-5xl">
                   {annual ? "$20" : "$25"}
                 </span>
-                <span className="text-xs font-medium text-mint/85">
-                  USD {annual ? "/mes · anual" : "/mes"}
+                <span className="text-sm font-medium text-mint/85">
+                  /mes
                 </span>
               </div>
+              <p className="mt-1 text-xs text-mint/80">
+                Para médicos independientes.
+              </p>
+              {annual && (
+                <p className="mt-1 text-[11px] font-medium text-[#BBF7D0]">
+                  Representa $240 al año (Ahorras $60)
+                </p>
+              )}
 
               <button
                 type="button"
-                className="mt-5 sm:mt-6 w-full rounded-full bg-[#FFFFFF] py-3 text-sm font-bold text-deep-teal transition-colors duration-150 ease-out hover:bg-[#FFFFFF]/90"
+                className="mt-6 w-full rounded-full bg-[#FFFFFF] py-3 text-sm font-bold text-deep-teal transition-colors duration-150 ease-out hover:bg-[#FFFFFF]/90"
               >
-                Comenzar prueba de 14 días
+                Crear cuenta
               </button>
             </div>
 
             {/* Lista estructurada inferior sobre verde profundo */}
             <div className="flex flex-1 flex-col px-4 pt-5 pb-4 sm:px-5 sm:pt-6 sm:pb-5">
-              <p className="text-[11px] font-bold tracking-[0.14em] uppercase text-mint-strong/75">
-                Todo lo de Inicial, más
-              </p>
-              <ul className="mt-3.5 sm:mt-4 space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-mint/95">
+              <ul className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-mint/95">
                 {proFeatures.map((feat) => (
                   <li key={feat} className="flex items-start gap-2.5">
                     <span className="mt-0.5 flex h-4.5 w-4.5 shrink-0 items-center justify-center rounded-full bg-mint-strong/20 text-mint-strong">
@@ -489,43 +479,35 @@ export function Pricing() {
 
           {/* Plan Clínicas & API B2B */}
           <div className="flex flex-col rounded-[28px] sm:rounded-[32px] border border-black/[0.06] bg-[#EAE9E3]/75 p-2 sm:p-2.5 transition-[box-shadow,border-color] duration-200 ease-out hover:border-primary-teal/25 hover:shadow-[0_18px_40px_rgba(12,55,56,0.07)]">
-            {/* Cápsula superior blanca (concéntrico: 20px móvil / 22px sm+) */}
+            {/* Cápsula superior blanca */}
             <div className="rounded-[20px] sm:rounded-[22px] border border-white bg-[#FFFFFF] p-5 sm:p-6 shadow-[0_2px_10px_rgba(12,55,56,0.04)]">
               <div className="flex items-center justify-between gap-2">
-                <span className="rounded-full bg-mint/70 px-3 py-1 text-[11px] font-bold tracking-wider uppercase text-primary-teal">
-                  Institucional
+                <span className="text-xs font-semibold text-ink-2">
+                  Clínicas / API
                 </span>
-                <span className="text-xs font-medium text-ink-2/70">Multi-sede</span>
               </div>
 
-              <h3 className="font-display mt-4 text-2xl text-deep-teal sm:text-[28px]">
-                Clínicas &amp; API B2B
-              </h3>
+              <div className="mt-4 flex items-baseline gap-2">
+                <h3 className="font-display text-3xl font-bold text-deep-teal sm:text-4xl">
+                  Custom
+                </h3>
+                <span className="text-xs font-medium text-ink-2">según volumen</span>
+              </div>
               <p className="mt-1 text-xs text-ink-2">
-                Para hospitales, centros médicos y software de salud.
+                Integración B2B y on-prem.
               </p>
-
-              <div className="mt-5 sm:mt-6 flex items-baseline gap-1.5">
-                <span className="font-display text-3xl font-semibold text-deep-teal sm:text-4xl">
-                  A medida
-                </span>
-                <span className="text-xs font-medium text-ink-2">/ por volumen</span>
-              </div>
 
               <a
                 href="#api"
-                className="mt-5 sm:mt-6 block w-full rounded-full bg-deep-teal py-3 text-center text-sm font-semibold text-white transition-colors duration-150 ease-out hover:bg-primary-teal"
+                className="mt-6 block w-full rounded-full bg-deep-teal py-3 text-center text-sm font-semibold text-white transition-colors duration-150 ease-out hover:bg-primary-teal"
               >
-                Contactar equipo B2B
+                Hablar con ventas
               </a>
             </div>
 
             {/* Lista estructurada inferior */}
             <div className="flex flex-1 flex-col px-4 pt-5 pb-4 sm:px-5 sm:pt-6 sm:pb-5">
-              <p className="text-[11px] font-bold tracking-[0.14em] uppercase text-ink-2/65">
-                Arquitectura empresarial
-              </p>
-              <ul className="mt-3.5 sm:mt-4 space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-deep-teal/90">
+              <ul className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-deep-teal/90">
                 {clinicFeatures.map((feat) => (
                   <li key={feat} className="flex items-start gap-2.5">
                     <span className="mt-0.5 flex h-4.5 w-4.5 shrink-0 items-center justify-center rounded-full bg-mint text-primary-teal">
@@ -700,8 +682,8 @@ export function FinalCta() {
 
       <div className="relative z-10 mx-auto max-w-3xl">
         <h2 className="font-display text-[2rem] leading-[1.12] text-balance sm:text-5xl lg:text-6xl sm:leading-tight">
-          Evoluciona tu práctica al siguiente estándar{" "}
-          <span className="em-serif text-[#BBF7D0]">médico</span>.
+          Evoluciona y optimiza el estándar de tu práctica{" "}
+          <span className="em-serif text-[#BBF7D0]">médica</span>.
         </h2>
         <p className="mt-4 sm:mt-5 text-[15px] sm:text-lg text-mint/85 leading-relaxed">
           Comienza hoy sin tarjeta de crédito y comprueba cómo UMI transforma cada consulta médica.
