@@ -4,7 +4,7 @@ import { UmiScrollSection } from "@/components/umi-scroll-section";
 import { StandardsSection } from "@/components/standards-section";
 import { B2bSection } from "@/components/b2b-section";
 import {
-  Testimonials,
+  // Testimonials, // Ocultado temporalmente; preparado para pronta implementación
   Pricing,
   Faq,
   FinalCta,
@@ -33,8 +33,8 @@ export default function Home() {
       {/* 5. Integración B2B y API para desarrolladores e instituciones */}
       <B2bSection />
 
-      {/* 6. Testimonios médicos reales (UI/UX mejorada) */}
-      <Testimonials />
+      {/* 6. Testimonios médicos reales (Oculto temporalmente; preparado para pronta implementación) */}
+      {/* <Testimonials /> */}
 
       {/* 7. Planes y Precios transparentes (UI/UX mejorada con switcher anual) */}
       <Pricing />
