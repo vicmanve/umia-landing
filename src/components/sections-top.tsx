@@ -68,7 +68,7 @@ export function Navbar() {
   const links = [
     ["Historia Clínica", "#ecosistema"],
     ["Agente IA", "#umi"],
-    ["Normativa", "#seguridad"],
+    ["Seguridad", "#seguridad"],
     ["Planes", "#precios"],
   ];
 
