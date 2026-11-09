@@ -66,8 +66,8 @@ export function Navbar() {
   }, [mobileMenuOpen]);
 
   const links = [
-    ["Historia Clínica", "#ecosistema"],
-    ["Agente IA", "#umi"],
+    ["Funciones", "#ecosistema"],
+    ["UMI", "#umi"],
     ["Seguridad", "#seguridad"],
     ["Planes", "#precios"],
   ];
