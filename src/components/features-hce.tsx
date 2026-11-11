@@ -32,8 +32,7 @@ const featuresList: FeatureItem[] = [
     title: "La información del paciente, organizada y segura",
     description:
       "La HCE reúne notas, diagnósticos, tratamientos, recetas, informes y solicitudes en un expediente digital que se mantiene dentro de UMIA para futuras consultas.",
-    image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1000&auto=format&fit=crop&q=85",
+    image: "/features/historia-clinica.jpg",
     imageAlt: "Médico consultando el expediente electrónico del paciente en UMIA",
     icon: FileText,
   },
@@ -43,8 +42,7 @@ const featuresList: FeatureItem[] = [
     title: "Documentos listos en un clic",
     description:
       "Récipes, informes, solicitudes de exámenes y demás documentos médicos, disponibles al instante para compartir por WhatsApp o descargar en PDF.",
-    image:
-      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1000&auto=format&fit=crop&q=85",
+    image: "/features/documentos.jpg",
     imageAlt: "Especialistas preparando récipes e informes médicos digitales",
     icon: Download,
   },
@@ -54,8 +52,7 @@ const featuresList: FeatureItem[] = [
     title: "Tus estudios, en el navegador",
     description:
       "Visualiza tomografías, resonancias y radiografías dentro de la ficha del paciente, sin instalar software pesado ni complementos externos.",
-    image:
-      "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=1000&auto=format&fit=crop&q=85",
+    image: "/features/visor-dicom.jpg",
     imageAlt: "Revisión de estudio tomográfico de alta precisión en navegador",
     icon: Eye,
   },
@@ -65,8 +62,7 @@ const featuresList: FeatureItem[] = [
     title: "Agenda multiconsultorio",
     description:
       "Coordina consultas presenciales, virtuales y a domicilio en distintas clínicas, con recordatorios automáticos y acceso dedicado para tu secretaria.",
-    image:
-      "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=1000&auto=format&fit=crop&q=85",
+    image: "/features/agenda.jpg",
     imageAlt: "Doctora coordinando su agenda médica entre múltiples consultorios",
     icon: Calendar,
   },
