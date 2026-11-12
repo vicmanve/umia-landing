@@ -77,12 +77,12 @@ export function StandardsSection() {
             <BlurFade inView delay={0.15}>
               <div className="relative mx-auto max-w-[380px] sm:max-w-[420px] lg:max-w-none">
                 {/* Marco de fotografía médico con acabados limpios */}
-                <div className="relative aspect-[4/4.6] sm:aspect-[4/5] w-full overflow-hidden rounded-[26px] sm:rounded-[28px] border border-line bg-canvas shadow-[0_20px_50px_rgba(12,55,56,0.12)] outline outline-1 -outline-offset-1 outline-black/10">
+                <div className="relative aspect-[4/4.5] w-full overflow-hidden rounded-[26px] sm:rounded-[28px] border border-line bg-canvas shadow-[0_20px_50px_rgba(12,55,56,0.12)] outline outline-1 -outline-offset-1 outline-black/10">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={assetPath("/compliance-doctor.jpg")}
-                    alt="Doctora especialista de UMIA con expediente digital seguro"
-                    className="h-full w-full object-cover object-top"
+                    alt="Especialistas de UMIA con expediente digital seguro y blindado"
+                    className="h-full w-full object-cover object-center"
                   />
                   {/* Sutil viñeta degradada inferior */}
                   <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-deep-teal/40 via-transparent to-transparent" />
