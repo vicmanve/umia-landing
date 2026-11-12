@@ -9,7 +9,7 @@ import {
   QrCode,
   SlidersHorizontal,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { assetPath, cn } from "@/lib/utils";
 
 interface FeatureItem {
   id: string;
@@ -328,7 +328,7 @@ export function FeaturesHce() {
                     /* eslint-disable-next-line @next/next/no-img-element */
                     <img
                       key={feat.id}
-                      src={feat.image}
+                      src={assetPath(feat.image)}
                       alt={feat.imageAlt}
                       className={cn(
                         "[grid-area:1/1] h-full w-full object-cover transition-[opacity,scale] duration-300 ease-[cubic-bezier(0.2,0,0,1)] motion-reduce:scale-100",
@@ -446,7 +446,7 @@ export function FeaturesHce() {
                     <div className="relative mb-6 aspect-[4/4.1] sm:mb-8 sm:aspect-[16/10.5] w-full overflow-hidden rounded-[24px] bg-deep-teal lg:hidden outline outline-1 -outline-offset-1 outline-black/10">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
-                        src={feat.image}
+                        src={assetPath(feat.image)}
                         alt={feat.imageAlt}
                         className="h-full w-full object-cover object-top sm:object-center"
                       />
